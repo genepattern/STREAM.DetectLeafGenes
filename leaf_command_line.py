@@ -44,20 +44,12 @@ def main():
     parser = argparse.ArgumentParser(description='%s Parameters' % __tool_name__ ,formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("-m", "--data-file", dest="input_filename",default = None, help="input file name, pkl format from Stream preprocessing module", metavar="FILE")
     parser.add_argument("-of","--of",dest="output_filename_prefix", default="StreamiFSOutput",  help="output file name prefix")
-    parser.add_argument("-fig_width",dest="fig_width", type=int, default=8, help="")
-    parser.add_argument("-fig_height",dest="fig_height", type=int, default=8, help="")
-    parser.add_argument("-fig_legend_ncol",dest="fig_legend_ncol", type=int, default=None, help="")
-
-
     parser.add_argument("-cutoff_zscore",dest="cutoff_zscore", type=float, default=1.5, help="")
     parser.add_argument("-cutoff_pvalue",dest="cutoff_pvalue", type=float, default=0.01, help="")
     parser.add_argument("-percentile_expr",dest="percentile_expr", type=int, default=95, help="")
     parser.add_argument("-flag_use_precomputed",dest="flag_use_precomputed", action="store_true", help="")
     parser.add_argument("-root",dest="root", default=None, help="")
     parser.add_argument("-preference",dest="preference", default=None, help="")
-    parser.add_argument("-cutoff_spearman",dest="cutoff_spearman", type=float, default=0.4, help="")
-    parser.add_argument("-cutoff_logfc",dest="cutoff_logfc", type=float, default=0.25, help="")
-    parser.add_argument("-num_genes",dest="num_genes", type=int, default=15, help="")
 
     args = parser.parse_args()
     
