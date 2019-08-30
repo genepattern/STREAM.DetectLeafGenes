@@ -1,0 +1,10 @@
+[
+{"name": "Inputs and Output", 
+  "parameters": ["data.file", "output.filename" ]},
+
+{"name": "Marker Gene Detection",
+  "parameters": ["root", "preference","percentile_expr","flag_use_precomputed", "cutoff_zscore","cutoff_pvalue" ] },
+
+]
+
+
