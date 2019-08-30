@@ -6,7 +6,7 @@ LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00403:99
 author=Ted Liefeld, UCSD School of Medicine.
 categories=SingleCell
 
-commandLine=python /stream/leaf_command_line.py -m <data.file> -of <output.filename> <root> <preference> <cutoff_zscore> <cutoff_pvalue> <percentile_expr> <flag_use_precomputed>  
+commandLine=python /stream/leaf_command_line.py -m <data.file> -of <output.filename> <root> <preference> <cutoff_zscore> <cutoff_pvalue> <percentile_expr> <flag_use_precomputed> -n_jobs <job.cpuCount> 
 
 cpuType=any
 description=Detect marker genes for each leaf branch

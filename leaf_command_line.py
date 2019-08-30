@@ -50,6 +50,7 @@ def main():
     parser.add_argument("-flag_use_precomputed",dest="flag_use_precomputed", action="store_true", help="")
     parser.add_argument("-root",dest="root", default=None, help="")
     parser.add_argument("-preference",dest="preference", default=None, help="")
+    parser.add_argument("-n_jobs",dest="n_jobs", type=int, default=8, help="")
 
     args = parser.parse_args()
     
@@ -58,7 +59,7 @@ def main():
     adata = st.read(file_name=args.input_filename, file_format='pkl', experiment='rna-seq', workdir=workdir)
     preference = args.preference.split(',')
     print(preference)
-    st.detect_leaf_genes(adata,cutoff_zscore=args.cutoff_zscore,cutoff_pvalue=args.cutoff_pvalue,percentile_expr=args.percentile_expr, n_jobs=8,
+    st.detect_leaf_genes(adata,cutoff_zscore=args.cutoff_zscore,cutoff_pvalue=args.cutoff_pvalue,percentile_expr=args.percentile_expr, n_jobs=args.n_jobs,
                      use_precomputed=args.flag_use_precomputed, root=args.root,preference=preference)
     adata.uns['leaf_genes_all']
    

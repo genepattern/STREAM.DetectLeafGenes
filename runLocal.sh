@@ -1,1 +1,1 @@
-docker run  -v ${PWD}:$PWD -w $PWD/job_1 genepattern/stream_detectleafgenes python /stream/leaf_command_line.py  -m $PWD/test/data/stream_epg_result.pkl -of marker  -root S3  -preference S4,S1 -cutoff_zscore 1.5 -cutoff_pvalue 0.01 -percentile_expr 95  
+docker run  -v ${PWD}:$PWD -w $PWD/job_1 genepattern/stream_detectleafgenes python /stream/leaf_command_line.py  -m $PWD/test/data/stream_epg_result.pkl -of marker  -root S3  -preference S4,S1 -cutoff_zscore 1.5 -cutoff_pvalue 0.01 -percentile_expr 95 -n_jobs 8 
