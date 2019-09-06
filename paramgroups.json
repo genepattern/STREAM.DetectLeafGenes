@@ -3,7 +3,7 @@
   "parameters": ["data.file", "output.filename" ]},
 
 {"name": "Marker Gene Detection",
-  "parameters": ["root", "preference","percentile_expr","flag_use_precomputed", "cutoff_zscore","cutoff_pvalue" ] },
+  "parameters": ["root", "preference","percentile.expr","use.precomputed", "cutoff.zscore","cutoff.pvalue" ] },
 
 ]
 
