@@ -1,0 +1,19 @@
+#
+# ant -f ${GPUNIT_HOME}/build.xml -Dgpunit.diffStripTrailingCR="--strip-trailing-cr" -Dgp.host="beta.genepattern.org" -Dgp.url="https://beta.genepattern.org" -Dgp.user="ted-dev" -Dgp.password="" -Dgpunit.testfolder=`pwd` gpunit
+#
+name: STREAM.DetectLeafGenes
+module: STREAM.DetectLeafGenes
+params: 
+    "data.file": "./data/stream_epg_result.pkl" 
+    "output.filename": "test"
+    "root": "S3"
+    "preference": "S1,S3"
+assertions:
+    jobStatus: success
+    files:
+        "test_stream_result.pkl":  !!null
+        "leaf_genes/leaf_genesS1_S0.tsv": !!null
+        "leaf_genes/leaf_genesS1_S2.tsv": !!null
+        "leaf_genes/leaf_genesS3_S4.tsv": !!null
+        "leaf_genes/leaf_genesS3_S5.tsv": !!null
+
