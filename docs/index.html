@@ -48,20 +48,15 @@
 
 <p>STREAM.DetectLeafGenes is used to detect marker genes for each leaf branch.	</p>
 
-<p><h5>Huidong to add detail explaining this part of the STREAM pipeline</h5></p>
-
-<p>&nbsp;</p>
-
 <h2>Algorithm</h2>
 <p>
-<h5>Huidong to cover details of this portion of the analysis</h5>
+For each gene E we scale the gene expression values to [0,1]. Then we calculate the average gene expressions for all leaf branches. Based on the average expressions, we calculate the Z-scores of all leaf branches. If there is any leaf branch with an absolute Z-score greater than 1.5, then the leaf branch with the highest absolute Z-score value will be picked as the candidate leaf branch. Next, Kruskal–Wallis H-test is computed for all the leaf branches to test if a significant difference of gene expression median value between leaf branches exists. If it is significant (p-value < 0.01), then a post-hoc pairwise Conover’s test is computed for multiple comparisons of mean rank sums test between all leaf branches. If the p-values between the candidate leaf branch and the other leaf branches are all below the specified threshold (0.01), then the gene E will be considered as leaf gene of the candidate leaf branch.
 </p>
 
 <h2>References</h2>
 <p>H Chen, L Albergante, JY Hsu, CA Lareau, GL Bosco, J Guan, S Zhou, AN Gorban, DE Bauer, MJ Aryee, DM Langenau, A Zinovyev, JD Buenrostro, GC Yuan, L Pinello&nbsp;<a href="https://www.nature.com/articles/s41467-019-09670-4">Single-cell trajectories reconstruction, exploration and mapping of omics data with STREAM. </a> Nature Communications, volume 10, Article number: 1903 (2019)</p>
 <p>Nestorowa, S. et al.<a href="https://www.ncbi.nlm.nih.gov/pubmed/27365425"> A single-cell resolution map of mouse hematopoietic stem and progenitor cell differentiation</a>. Blood 128, e20-31 (2016).</p>
 <p>Pinello Lab &nbsp; <a href="https://github.com/pinellolab/STREAM">STREAM Github Repository</a></p>
-<p><b>ADD GPNB NOTEBOOK HERE WHEN READY</b></p>
 
 <h2>Input Files</h2>
 
