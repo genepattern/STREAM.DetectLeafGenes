@@ -9,13 +9,13 @@ categories=SingleCell
 commandLine=python /stream/leaf_command_line.py -m <data.file> -of <output.filename> <root> <preference> <cutoff.zscore> <cutoff.pvalue> <percentile.expr> <use.precomputed> -n_jobs <job.cpuCount> 
 
 cpuType=any
-description=Detect marker genes for each leaf branch
+description=Detect marker genes for each leaf branch.
 fileFormat=pkl
 language=any
 minGenePatternVersion=3.9.13
 name=STREAM.DetectLeafGenes
 os=any
-job.docker.image=genepattern/stream_detectleafgenes
+job.docker.image=genepattern/stream_detectleafgenes:0.10
 job.cpuCount=2
 job.memory=8 Gb
 job.walltime=1\:00\:00
