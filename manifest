@@ -4,7 +4,6 @@
 JVMLevel=
 LSID=urn:lsid:broad.mit.edu:cancer.software.genepattern.module.analysis:00403:999999999
 author=Ted Liefeld, UCSD School of Medicine.
-categories=SingleCell
 
 commandLine=python /stream/leaf_command_line.py -m <data.file> -of <output.filename> <root> <preference> <cutoff.zscore> <cutoff.pvalue> <percentile.expr> <use.precomputed> -n_jobs <job.cpuCount> 
 
@@ -140,6 +139,7 @@ quality=beta
 requiredPatchLSIDs=
 requiredPatchURLs=
 taskDoc=doc.html
-taskType=ScRnaSeq
+categories=Single-Cell; RNA-Seq
+taskType=Single-cell
 userid=ted
 version=inital revision
